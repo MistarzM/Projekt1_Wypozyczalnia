@@ -1,8 +1,8 @@
-ID zamowienia: #1001
-Cena: 0
-Model: 
+ID zamowienia: #1000
+Cena: 300
+Model: Atomic Redster S7
 Data wypozyczenia: 2023-06-03
-Czas wypozyczenia: 0 dni
-Rozmiar buta: 
-Wzrost: 
-Waga: 
+Czas wypozyczenia: 2 dni
+Rozmiar buta: 28
+Wzrost: 205-210
+Waga: 35-40

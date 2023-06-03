@@ -1,6 +1,6 @@
-ID klienta: #1006
-Imie: 
-Nazwisko: 
-Numer telefonu: +48 
+ID klienta: #1001
+Imie: aaaaaaaaad
+Nazwisko: dddddddddd
+Numer telefonu: +48 234234
 Cena: 0 PLN
-Metoda platnosci: Gotowka
+Metoda platnosci: Karta

@@ -66,6 +66,7 @@ MainFrame::MainFrame(const wxString& site, const wxPoint& position, const wxSize
 	//main-------------------------------------------------------------------------------------
 	text_wypozyczalnia = new wxStaticText(panel_main1, wxID_ANY, "Wypozyczalnia", wxPoint(10, 10));
 	text_wypozyczalnia->SetFont(text_wypozyczalnia->GetFont().Scale(1.8));									//set_size
+																											//opis
 
 	//bottom-----------------------------------------------------------------------------------
 

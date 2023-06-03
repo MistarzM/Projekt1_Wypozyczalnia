@@ -1,8 +1,8 @@
-ID zamowienia: #1004
+ID zamowienia: #1001
 Cena: 0
-Model: 
+Model: Nitro CAMBER WIDE
 Data wypozyczenia: 2023-06-03
 Czas wypozyczenia: 0 dni
-Rozmiar buta: 
-Wzrost: 
-Waga: 
+Rozmiar buta: 30
+Wzrost: 205-210
+Waga: 35-40
