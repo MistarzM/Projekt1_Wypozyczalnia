@@ -1,0 +1,6 @@
+ID klienta: #1000
+Imie: 
+Nazwisko: 
+Numer telefonu: +48 
+Cena: 0 PLN
+Metoda platnosci: Gotowka

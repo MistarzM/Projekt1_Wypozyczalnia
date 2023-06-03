@@ -172,23 +172,23 @@ void Akcesoria::OnPodgladModelu(wxCommandEvent& event)
 	wxString imagePath;
 	if (numer_zdj == "Head Multi S")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/akcesoria_zdj/akcesoria1.jpg";
+		imagePath = wxT("zdj/akcesoria_zdj/akcesoria1.jpg");
 	}
 	else if (numer_zdj == "Atomic Park")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/akcesoria_zdj/akcesoria2.jpg";
+		imagePath = wxT("zdj/akcesoria_zdj/akcesoria2.jpg");
 	}
 	else if (numer_zdj == "Rossignol Tactic M")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/akcesoria_zdj/akcesoria3.jpg";
+		imagePath = wxT("zdj/akcesoria_zdj/akcesoria3.jpg");
 	}
 	else if (numer_zdj == "Salomon Icon Ergo S3")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/akcesoria_zdj/akcesoria4.jpg";
+		imagePath = wxT("zdj/akcesoria_zdj/akcesoria4.jpg");
 	}
 	else
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/akcesoria_zdj/akcesoria5.jpg";
+		imagePath = wxT("zdj/akcesoria_zdj/akcesoria5.jpg");
 	}
 
 	if (!imagePath.IsEmpty())
@@ -226,7 +226,7 @@ void Akcesoria::OnDalej(int id_produkt, double cena_produkt)
 	wxString waga = choice_waga->GetStringSelection();
 
 
-	std::ofstream outputFile("C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/baza_danych/zamowienia_akcesoria.txt");
+	std::ofstream outputFile("C:/Users/micha/source/repos/Projekt1_Wypozyczalnia/Projekt1_Wypozyczalnia/baza_danych/zamowienia_akcesoria.txt");
 
 	if (outputFile.is_open())
 	{

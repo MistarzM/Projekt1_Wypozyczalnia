@@ -1,0 +1,8 @@
+ID zamowienia: #1001
+Cena: 95
+Model: Rossignol EVO 70
+Data wypozyczenia: 2023-06-02
+Czas wypozyczenia: 1 dni
+Rozmiar buta: 34
+Poziom jazdy: Œrednio Zaawansowany
+Flex: 80-90

@@ -1,0 +1,8 @@
+ID zamowienia: #1000
+Cena: 0
+Model: 
+Data wypozyczenia: 2023-06-03
+Czas wypozyczenia: 0 dni
+D³ugoœæ kijka: 
+Przeznaczenie: 
+Rozmiar uchwytu: 
