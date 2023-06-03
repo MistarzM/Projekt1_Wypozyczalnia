@@ -176,23 +176,23 @@ void ButyNarciarskie::OnPodgladModelu(wxCommandEvent& event)
 	wxString imagePath;
 	if (numer_zdj == "Fischer RC4")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/buty_zdj/buty1.jpg";
+		imagePath = wxT("zdj/buty_zdj/buty1.jpg");
 	}
 	else if (numer_zdj == "Salomon S/PRO 120")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/buty_zdj/buty2.jpg";
+		imagePath = wxT("zdj/buty_zdj/buty2.jpg");
 	}
 	else if (numer_zdj == "Rossignol EVO 70")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/buty_zdj/buty3.jpg";
+		imagePath = wxT("zdj/buty_zdj/buty3.jpg");
 	}
 	else if (numer_zdj == "Head Z2")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/buty_zdj/buty4.jpg";
+		imagePath = wxT("zdj/buty_zdj/buty4.jpg");
 	}
 	else
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/buty_zdj/buty5.jpg";
+		imagePath = wxT("zdj/buty_zdj/buty5.jpg");
 	}
 
 	if (!imagePath.IsEmpty())
@@ -230,7 +230,7 @@ void ButyNarciarskie::OnDalej(int id_produkt, double cena_produkt)
 	wxString waga = choice_waga->GetStringSelection();
 
 
-	std::ofstream outputFile("C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/baza_danych/zamowienia_buty_narciarskie.txt");
+	std::ofstream outputFile(wxT("baza_danych/zamowienia_buty_narciarskie.txt"));
 
 	if (outputFile.is_open())
 	{

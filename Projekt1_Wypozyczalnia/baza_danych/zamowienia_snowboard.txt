@@ -1,8 +1,8 @@
-ID zamowienia: #1000
+ID zamowienia: #1004
 Cena: 0
-Model: Burton DESCENDANT 2021
-Data wypozyczenia: 2023-06-02
+Model: 
+Data wypozyczenia: 2023-06-03
 Czas wypozyczenia: 0 dni
-Rozmiar buta: 28
-Wzrost: 185-190
-Waga: 40-45
+Rozmiar buta: 
+Wzrost: 
+Waga: 

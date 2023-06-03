@@ -226,7 +226,7 @@ void Akcesoria::OnDalej(int id_produkt, double cena_produkt)
 	wxString waga = choice_waga->GetStringSelection();
 
 
-	std::ofstream outputFile("C:/Users/micha/source/repos/Projekt1_Wypozyczalnia/Projekt1_Wypozyczalnia/baza_danych/zamowienia_akcesoria.txt");
+	std::ofstream outputFile(wxT("baza_danych/zamowienia_akcesoria.txt"));
 
 	if (outputFile.is_open())
 	{

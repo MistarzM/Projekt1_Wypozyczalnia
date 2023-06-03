@@ -1,4 +1,4 @@
-ID klienta: #1000
+ID klienta: #1006
 Imie: 
 Nazwisko: 
 Numer telefonu: +48 

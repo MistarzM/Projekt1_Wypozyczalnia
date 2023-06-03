@@ -176,23 +176,23 @@ void Snowboard::OnPodgladModelu(wxCommandEvent& event)
 	wxString imagePath;
 	if (numer_zdj == "Burton DESCENDANT 2021")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/snowboard_zdj/snowboard1.jpg";
+		imagePath = wxT("zdj/snowboard_zdj/snowboard1.jpg");
 	}
 	else if (numer_zdj == "Capita DOA")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/snowboard_zdj/snowboard2.jpg";
+		imagePath = wxT("zdj/snowboard_zdj/snowboard2.jpg");
 	}
 	else if (numer_zdj == "LibTech Dynamo")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/snowboard_zdj/snowboard3.jpg";
+		imagePath = wxT("zdj/snowboard_zdj/snowboard3.jpg");
 	}
 	else if (numer_zdj == "Drake DFL 2023")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/snowboard_zdj/snowboard4.jpg";
+		imagePath = wxT("zdj/snowboard_zdj/snowboard4.jpg");
 	}
 	else
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/snowboard_zdj/snowboard5.jpg";
+		imagePath = wxT("zdj/snowboard_zdj/snowboard5.jpg");
 	}
 
 	if (!imagePath.IsEmpty())
@@ -230,7 +230,7 @@ void Snowboard::OnDalej(int id_produkt, double cena_produkt)
 	wxString waga = choice_waga->GetStringSelection();
 
 
-	std::ofstream outputFile("C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/baza_danych/zamowienia_snowboard.txt");
+	std::ofstream outputFile(wxT("baza_danych/zamowienia_snowboard.txt"));
 
 	if (outputFile.is_open())
 	{

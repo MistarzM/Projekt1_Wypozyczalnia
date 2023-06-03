@@ -176,23 +176,23 @@ void Narty::OnPodgladModelu(wxCommandEvent& event)
 	wxString imagePath;
 	if (numer_zdj == "Head SUPERSHAPE")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/narty_zdj/narty1.jpg";
+		imagePath = wxT("zdj/narty_zdj/narty1.jpg");
 	}
 	else if (numer_zdj == "Atomic Redster S7")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/narty_zdj/narty2.jpg";
+		imagePath = wxT("zdj/narty_zdj/narty2.jpg");
 	}
 	else if (numer_zdj == "Rossignol PURSUIT")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/narty_zdj/narty3.jpg";
+		imagePath = wxT("zdj/narty_zdj/narty3.jpg");
 	}
 	else if (numer_zdj == "Salomon QST Lux")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/narty_zdj/narty4.jpg";
+		imagePath = wxT("zdj/narty_zdj/narty4.jpg");
 	}
 	else
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/narty_zdj/narty5.jpg";
+		imagePath = wxT("zdj/narty_zdj/narty5.jpg");
 	}
 
 	if (!imagePath.IsEmpty())
@@ -230,7 +230,7 @@ void Narty::OnDalej(int id_produkt, double cena_produkt)
 	wxString waga = choice_waga->GetStringSelection();
 
 
-	std::ofstream outputFile("C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/baza_danych/zamowienia_narty.txt");
+	std::ofstream outputFile(wxT("baza_danych/zamowienia_narty.txt"));
 
 	if (outputFile.is_open())
 	{

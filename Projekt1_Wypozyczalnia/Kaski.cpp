@@ -168,23 +168,23 @@ void Kaski::OnPodgladModelu(wxCommandEvent& event)
 	wxString imagePath;
 	if (numer_zdj == "Alpina Junta")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/kaski_zdj/kask1.jpg";
+		imagePath = wxT("zdj/kaski_zdj/kask1.jpg");
 	}
 	else if (numer_zdj == "Meteor HOLO")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/kaski_zdj/kask2.jpg";
+		imagePath = wxT("zdj/kaski_zdj/kask2.jpg");
 	}
 	else if (numer_zdj == "Atomic Savor Visor")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/kaski_zdj/kask3.jpg";
+		imagePath = wxT("zdj/kaski_zdj/kask3.jpg");
 	}
 	else if (numer_zdj == "Smith Z1M")
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/kaski_zdj/kask4.jpg";
+		imagePath = wxT("zdj/kaski_zdj/kask4.jpg");
 	}
 	else
 	{
-		imagePath = "C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/zdj/kaski_zdj/kask5.jpg";
+		imagePath = wxT("zdj/kaski_zdj/kask5.jpg");
 	}
 
 	if (!imagePath.IsEmpty())
@@ -222,7 +222,7 @@ void Kaski::OnDalej(int id_produkt, double cena_produkt)
 	wxString waga = choice_waga->GetStringSelection();
 
 
-	std::ofstream outputFile("C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/baza_danych/zamowienia_kaski.txt");
+	std::ofstream outputFile(wxT("baza_danych/zamowienia_kaski.txt"));
 
 	if (outputFile.is_open())
 	{

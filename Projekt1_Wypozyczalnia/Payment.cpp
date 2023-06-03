@@ -62,7 +62,7 @@ void Payment::OnPotwierdz(wxCommandEvent& event)
 	double cena = this->total;
 	wxString metoda = metoda_platnosci->GetStringSelection();
 
-	std::ofstream outputFile("C:/Users/micha/source/repos/ProjektWypozyczalnia/ProjektWypozyczalnia/baza_danych/payment.txt");
+	std::ofstream outputFile(wxT("baza_danych/payment.txt"));
 
 	if (outputFile.is_open())
 	{

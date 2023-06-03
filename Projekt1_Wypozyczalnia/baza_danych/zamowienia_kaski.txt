@@ -1,8 +1,8 @@
-ID zamowienia: #1001
+ID zamowienia: #1005
 Cena: 0
 Model: 
-Data wypozyczenia: 2023-06-02
+Data wypozyczenia: 2023-06-03
 Czas wypozyczenia: 0 dni
 Rozmiar buta: 
-Wyjmowalna wyœció³ka: Tak
-Antyalergiczna wyœci³ka: Nie
+Wyjmowalna wyœció³ka: 
+Antyalergiczna wyœci³ka: 
