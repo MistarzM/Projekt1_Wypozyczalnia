@@ -1,6 +1,6 @@
-ID klienta: #1001
-Imie: aaaaaaaaad
-Nazwisko: dddddddddd
-Numer telefonu: +48 234234
-Cena: 0 PLN
-Metoda platnosci: Karta
+ID klienta: #1000
+Imie: asdfasf
+Nazwisko: sdafas
+Numer telefonu: +48 5345345
+Cena: 400 PLN
+Metoda platnosci: Gotowka

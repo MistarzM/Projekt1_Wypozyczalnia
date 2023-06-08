@@ -1,8 +1,8 @@
-ID zamowienia: #1006
-Cena: 0
-Model: 
-Data wypozyczenia: 2023-06-03
-Czas wypozyczenia: 0 dni
-D³ugoœæ kijka: 
-Przeznaczenie: 
-Rozmiar uchwytu: 
+ID zamowienia: #1004
+Cena: 56
+Model: McKinley Safine C
+Data wypozyczenia: 2023-06-08
+Czas wypozyczenia: 2 dni
+D³ugoœæ kijka: 75
+Przeznaczenie: Kijki zjazdowe
+Rozmiar uchwytu: Œredni

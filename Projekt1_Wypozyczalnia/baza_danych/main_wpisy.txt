@@ -1,0 +1,11 @@
+ Godziny otwarcia - 11.06.2023
+  Wypozyczalnia stworzona na potrzeby projektu - Podstawy programowania w C++.
+  Sklep stacjonarny w tym tygodniu bedzie otwarty w godzinach:
+
+	Poniedzialek: 8:00 - 18:00
+	Wtorek:       9:00 - 17:00
+	Sroda:        7:00 - 15:00
+	Czwartek:     8:00 - 17:00
+	Piatek:       9:00 - 15:00
+	Sobota:	      9:00 - 20:00
+	Niedziela     9:00 - 19:00

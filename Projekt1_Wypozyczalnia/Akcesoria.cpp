@@ -206,14 +206,26 @@ void Akcesoria::OnPodgladModelu(wxCommandEvent& event)
 
 void Akcesoria::OnButtonDalej(wxCommandEvent& event)
 {
-	//pobranie ceny
-	int cena_int = spin_ctrl_dni->GetValue();
-	double cena_wys = cena_wypozyczenia(cena_int);
-	//wys³anie ceny do formularza
-	payment_akcesoria = new Payment(this, cena_wys, ID);
-	OnDalej(ID, cena_wys);
-	payment_akcesoria->ShowModal();
-	payment_akcesoria->Destroy();
+	wxString model = choice_model_akcesoria->GetStringSelection();
+	int dni = spin_ctrl_dni->GetValue();
+	wxString rozmiar_buta = choice_rozmiar_buta->GetStringSelection();
+	wxString wzrost = choice_wzrost->GetStringSelection();
+	wxString waga = choice_waga->GetStringSelection();
+	if (model == "" || dni == 0 || rozmiar_buta == "" || wzrost == "" || waga == "")
+	{
+		wxMessageBox("Nie wybrano", "Error", wxOK | wxICON_ERROR);
+	}
+	else
+	{
+		//pobranie ceny
+		int cena_int = spin_ctrl_dni->GetValue();
+		double cena_wys = cena_wypozyczenia(cena_int);
+		//wys³anie ceny do formularza
+		payment_akcesoria = new Payment(this, cena_wys, ID);
+		OnDalej(ID, cena_wys);
+		payment_akcesoria->ShowModal();
+		payment_akcesoria->Destroy();
+	}
 }
 
 void Akcesoria::OnDalej(int id_produkt, double cena_produkt)

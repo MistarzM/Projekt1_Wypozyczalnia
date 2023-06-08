@@ -64,10 +64,11 @@ MainFrame::MainFrame(const wxString& site, const wxPoint& position, const wxSize
 	button_kontakt->Bind(wxEVT_BUTTON, &MainFrame::OnKontakt, this);
 
 	//main-------------------------------------------------------------------------------------
-	text_wypozyczalnia = new wxStaticText(panel_main1, wxID_ANY, "Wypozyczalnia", wxPoint(10, 10));
+	text_wypozyczalnia = new wxStaticText(panel_main1, wxID_ANY, "Og³oszenia", wxPoint(10, 10));
 	text_wypozyczalnia->SetFont(text_wypozyczalnia->GetFont().Scale(1.8));									//set_size
 																											//opis
 
+	ReadTextFromFile();																						//funkcja czytaj¹ca dane 
 	//bottom-----------------------------------------------------------------------------------
 
 
@@ -145,4 +146,31 @@ void MainFrame::OnKontakt(wxCommandEvent& event)
 void MainFrame::ChangeID(int& id)
 {
 	id++;
+}
+void MainFrame::ReadTextFromFile()
+{
+	std::ifstream file(wxT("baza_danych/main_wpisy.txt"));
+	if (!file.is_open())
+	{
+		wxMessageBox("Failed to open the file.", "Error", wxOK | wxICON_ERROR);
+		return;
+	}
+
+	std::stringstream buffer;
+	buffer << file.rdbuf();
+	std::string fileContents = buffer.str();
+
+	file.close();
+
+	size_t newlinePos = fileContents.find('\n');
+
+	std::string firstLine = fileContents.substr(0, newlinePos);
+	std::string restOfText = fileContents.substr(newlinePos + 1);
+
+	text_main_title = new wxStaticText(panel_main2, wxID_ANY, wxString(firstLine), wxPoint(30,30), wxDefaultSize, wxALIGN_LEFT);
+	text_main_title->SetFont(wxFont(14, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
+
+	text_main_content = new wxStaticText(panel_main2, wxID_ANY, wxString(restOfText), wxPoint(30, 70), wxDefaultSize, wxALIGN_LEFT);
+	text_main_content->SetFont(wxFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_LIGHT));
+
 }

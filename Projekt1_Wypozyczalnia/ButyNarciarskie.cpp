@@ -210,14 +210,26 @@ void ButyNarciarskie::OnPodgladModelu(wxCommandEvent& event)
 
 void ButyNarciarskie::OnButtonDalej(wxCommandEvent& event)
 {
-	//pobranie ceny
-	int cena_int = spin_ctrl_dni->GetValue();
-	double cena_wys = cena_wypozyczenia(cena_int);
-	//wys³anie ceny do formularza
-	payment_buty = new Payment(this, cena_wys, ID);
-	OnDalej(ID, cena_wys);
-	payment_buty->ShowModal();
-	payment_buty->Destroy();
+	wxString model = choice_model_buty->GetStringSelection();
+	int dni = spin_ctrl_dni->GetValue();
+	wxString rozmiar_buta = choice_rozmiar_buta->GetStringSelection();
+	wxString wzrost = choice_wzrost->GetStringSelection();
+	wxString waga = choice_waga->GetStringSelection();
+	if (model == "" || dni == 0 || rozmiar_buta == "" || wzrost == "" || waga == "")
+	{
+		wxMessageBox("Nie wybrano", "Error", wxOK | wxICON_ERROR);
+	}
+	else
+	{
+		//pobranie ceny
+		int cena_int = spin_ctrl_dni->GetValue();
+		double cena_wys = cena_wypozyczenia(cena_int);
+		//wys³anie ceny do formularza
+		payment_buty = new Payment(this, cena_wys, ID);
+		OnDalej(ID, cena_wys);
+		payment_buty->ShowModal();
+		payment_buty->Destroy();
+	}
 }
 
 void ButyNarciarskie::OnDalej(int id_produkt, double cena_produkt)

@@ -1,7 +1,7 @@
-ID zamowienia: #1003
+ID zamowienia: #1000
 Cena: 0
-Model: 
-Data wypozyczenia: 2023-06-03
+Model: Head Z2
+Data wypozyczenia: 2023-06-08
 Czas wypozyczenia: 0 dni
 Rozmiar buta: 
 Poziom jazdy: 

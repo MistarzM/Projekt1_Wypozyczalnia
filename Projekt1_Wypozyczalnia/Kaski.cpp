@@ -202,14 +202,26 @@ void Kaski::OnPodgladModelu(wxCommandEvent& event)
 
 void Kaski::OnButtonDalej(wxCommandEvent& event)
 {
-	//pobranie ceny
-	int cena_int = spin_ctrl_dni->GetValue();
-	double cena_wys = cena_wypozyczenia(cena_int);
-	//wys³anie ceny do formularza
-	payment_kask = new Payment(this, cena_wys, ID);
-	OnDalej(ID, cena_wys);
-	payment_kask->ShowModal();
-	payment_kask->Destroy();
+	wxString model = choice_model_kask->GetStringSelection();
+	int dni = spin_ctrl_dni->GetValue();
+	wxString rozmiar_buta = choice_rozmiar_kasku->GetStringSelection();
+	wxString wzrost = choice_wzrost->GetStringSelection();
+	wxString waga = choice_waga->GetStringSelection();
+	if (model == "" || dni == 0 || rozmiar_buta == "" || wzrost == "" || waga == "")
+	{
+		wxMessageBox("Nie wybrano", "Error", wxOK | wxICON_ERROR);
+	}
+	else
+	{
+		//pobranie ceny
+		int cena_int = spin_ctrl_dni->GetValue();
+		double cena_wys = cena_wypozyczenia(cena_int);
+		//wys³anie ceny do formularza
+		payment_kask = new Payment(this, cena_wys, ID);
+		OnDalej(ID, cena_wys);
+		payment_kask->ShowModal();
+		payment_kask->Destroy();
+	}
 }
 
 void Kaski::OnDalej(int id_produkt, double cena_produkt)

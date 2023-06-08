@@ -61,24 +61,30 @@ void Payment::OnPotwierdz(wxCommandEvent& event)
 	wxString numer_telefonu = text_ctrl_numer_telefonu->GetValue();
 	double cena = this->total;
 	wxString metoda = metoda_platnosci->GetStringSelection();
-
-	std::ofstream outputFile(wxT("baza_danych/payment.txt"));
-
-	if (outputFile.is_open())
+	if (imie == "" || nazwisko == ""|| numer_telefonu == "")
 	{
-		outputFile << "ID klienta: #" << id << std::endl;
-		outputFile << "Imie: " << imie << std::endl;
-		outputFile << "Nazwisko: " << nazwisko << std::endl;
-		outputFile << "Numer telefonu: " << numer_telefonu << std::endl;
-		outputFile << "Cena: " << cena << " PLN" << std::endl;
-		outputFile << "Metoda platnosci: " << metoda << std::endl;
-		outputFile.close();
+		wxMessageBox("Podaj wymagane informacje", "Error", wxOK | wxICON_ERROR);
 	}
 	else
 	{
-		wxMessageBox("Error: Unable to open the file for writing.", "Error", wxOK | wxICON_ERROR);
+		std::ofstream outputFile(wxT("baza_danych/payment.txt"));
+
+		if (outputFile.is_open())
+		{
+			outputFile << "ID klienta: #" << id << std::endl;
+			outputFile << "Imie: " << imie << std::endl;
+			outputFile << "Nazwisko: " << nazwisko << std::endl;
+			outputFile << "Numer telefonu: " << numer_telefonu << std::endl;
+			outputFile << "Cena: " << cena << " PLN" << std::endl;
+			outputFile << "Metoda platnosci: " << metoda << std::endl;
+			outputFile.close();
+		}
+		else
+		{
+			wxMessageBox("Error: Unable to open the file for writing.", "Error", wxOK | wxICON_ERROR);
+		}
+		EndModal(wxID_OK);
 	}
-	EndModal(wxID_OK);
 }
 
 

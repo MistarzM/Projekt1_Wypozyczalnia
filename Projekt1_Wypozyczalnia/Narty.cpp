@@ -210,14 +210,27 @@ void Narty::OnPodgladModelu(wxCommandEvent& event)
 
 void Narty::OnButtonDalej(wxCommandEvent& event)
 {
-	//pobranie ceny
-	int cena_int = spin_ctrl_dni->GetValue();
-	double cena_wys = cena_wypozyczenia(cena_int);
-	//wys³anie ceny do formularza
-	payment_narty = new Payment(this, cena_wys, ID);
-	OnDalej(ID, cena_wys);
-	payment_narty->ShowModal();
-	payment_narty->Destroy();
+	wxString model = choice_model_nart->GetStringSelection();
+	int dni = spin_ctrl_dni->GetValue();
+	wxString rozmiar_buta = choice_rozmiar_buta->GetStringSelection();
+	wxString wzrost = choice_wzrost->GetStringSelection();
+	wxString waga = choice_waga->GetStringSelection();
+
+	if (model == "" || dni == 0 || rozmiar_buta == "" || wzrost == "" || waga =="")			//zabezpieczenie
+	{
+		wxMessageBox("Nie wybrano", "Error", wxOK | wxICON_ERROR);
+	}
+	else
+	{
+		//pobranie ceny
+		int cena_int = spin_ctrl_dni->GetValue();
+		double cena_wys = cena_wypozyczenia(cena_int);
+		//wys³anie ceny do formularza
+		payment_narty = new Payment(this, cena_wys, ID);
+		OnDalej(ID, cena_wys);
+		payment_narty->ShowModal();
+		payment_narty->Destroy();
+	}
 }
 
 void Narty::OnDalej(int id_produkt, double cena_produkt)
@@ -228,7 +241,6 @@ void Narty::OnDalej(int id_produkt, double cena_produkt)
 	wxString rozmiar_buta = choice_rozmiar_buta->GetStringSelection();
 	wxString wzrost = choice_wzrost->GetStringSelection();
 	wxString waga = choice_waga->GetStringSelection();
-
 
 	std::ofstream outputFile(wxT("baza_danych/zamowienia_narty.txt"));
 

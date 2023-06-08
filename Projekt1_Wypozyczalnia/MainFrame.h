@@ -9,6 +9,7 @@
 #include"Kontakt.h"
 #include"Logowanie.h"
 #include"Rejestracja.h"
+#include<fstream>
 
 class MainFrame : public wxFrame
 {
@@ -27,6 +28,8 @@ public:
 	void OnGaleria(wxCommandEvent& event);
 	void OnKontakt(wxCommandEvent& event);
 	void ChangeID(int& id);
+	//mid_content---------------------------------
+	void ReadTextFromFile();
 private:
 	int ID = 1000; //ID 
 
@@ -53,5 +56,7 @@ private:
 	wxStaticText* text_numer_telefonu;
 	wxStaticText* text_nazwa;
 	wxStaticText* text_wypozyczalnia;
+	wxStaticText* text_main_title;
+	wxStaticText* text_main_content;
 };
 

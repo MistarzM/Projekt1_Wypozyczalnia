@@ -1,8 +1,8 @@
 ID zamowienia: #1000
-Cena: 300
-Model: Atomic Redster S7
-Data wypozyczenia: 2023-06-03
-Czas wypozyczenia: 2 dni
-Rozmiar buta: 28
+Cena: 200
+Model: Rossignol PURSUIT
+Data wypozyczenia: 2023-06-08
+Czas wypozyczenia: 1 dni
+Rozmiar buta: 30
 Wzrost: 205-210
-Waga: 35-40
+Waga: 15-20
