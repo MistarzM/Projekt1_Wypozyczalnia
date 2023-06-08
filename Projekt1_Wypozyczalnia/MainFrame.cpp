@@ -167,10 +167,10 @@ void MainFrame::ReadTextFromFile()
 	std::string firstLine = fileContents.substr(0, newlinePos);
 	std::string restOfText = fileContents.substr(newlinePos + 1);
 
-	text_main_title = new wxStaticText(panel_main2, wxID_ANY, wxString(firstLine), wxPoint(30,30), wxDefaultSize, wxALIGN_LEFT);
+	text_main_title = new wxStaticText(panel_main2, wxID_ANY, wxString(firstLine), wxPoint(40,30), wxDefaultSize, wxALIGN_LEFT);
 	text_main_title->SetFont(wxFont(14, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 
-	text_main_content = new wxStaticText(panel_main2, wxID_ANY, wxString(restOfText), wxPoint(30, 70), wxDefaultSize, wxALIGN_LEFT);
+	text_main_content = new wxStaticText(panel_main2, wxID_ANY, wxString(restOfText), wxPoint(40, 70), wxDefaultSize, wxALIGN_LEFT);
 	text_main_content->SetFont(wxFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_LIGHT));
 
 }
